@@ -1,12 +1,10 @@
 import streamlit as st
-from dotenv import load_dotenv
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.cohere import CohereEmbeddings
 from langchain.vectorstores.faiss import FAISS
 from langchain.chains import RetrievalQA
 from langchain.llms.cohere import Cohere
 import PyPDF2
-load_dotenv()
 
 def get_pdf_text():
     text = ""
@@ -21,8 +19,8 @@ def get_pdf_text():
 def get_text_chunks(text):
     text_splitter = CharacterTextSplitter(
         separator="\n",
-        chunk_size=1000,
-        chunk_overlap=200,
+        chunk_size=200,
+        chunk_overlap=20,
         length_function=len
     )
     chunks = text_splitter.split_text(text)
@@ -50,7 +48,7 @@ def main():
                     llm=llm,
                     retriever=vectorstore.as_retriever(),
                 )
-                prompt = "You will be asked a question by the user.\n \
+                prompt = f"You will be asked a question by the user.\n \
                     The answer should be 3 - 4 sentences according to the context provided.\n \
                     The answer should be in your own words.\n \
                     The answer should be easy to understand.\n \
