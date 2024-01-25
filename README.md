@@ -1,4 +1,4 @@
-# DocuChat AI
+# BetterZila Project
 
 ## Project Description
 This project is a generative AI chatbot that specializes in extracting and comprehending information from PDF documents. It allows users to upload multiple PDF files, trains on the content of those documents, and enables them to ask questions or make queries related to the PDFs' content. The chatbot leverages Langchain, PyPDF2, and Streamlit to provide an interactive and user-friendly experience.
@@ -17,4 +17,8 @@ This project is a generative AI chatbot that specializes in extracting and compr
 - **Python**: The project is primarily developed in Python.
 
 ## Deployed Link
-[Live Demo](https://docuchat-ai-sg.streamlit.app/)
+[Live Demo](https://betterzila-shashank.streamlit.app/)
+
+## Live Video 
+
+https://www.loom.com/share/77142a2277604a20b7ae7d326a6ddb0d
